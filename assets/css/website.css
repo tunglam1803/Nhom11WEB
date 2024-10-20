@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007BFF; /* Bootstrap blue */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.menu > li:hover .sub_menu {
+    visibility: visible;
+    opacity: 1;
+    top: 40px;
+}
+
+.sub_menu {
+    position: absolute;
+    width: 200px; /* Increased width for readability */
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    top: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.sub_menu ul {
+    padding-left: 20px;
+}
+
+.sub_menu li a {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 8px 16px;
+    display: block;
+}
+
+.menu li a {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.other {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.other li {
+    padding: 0 15px;
+    position: relative;
+}
+
+.other li:first-child input {
+    width: 150px; /* Adjust width */
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    padding: 5px 10px;
+}
+
+.other li:first-child i {
+    position: absolute;
+    right: 10px;
+    color: #007BFF;
+}
+
+#slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+}
+
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}
+
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.dot_container {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #007BFF;
+}
+
+/* App Section */
+.app_container {
+    text-align: center;
+    padding: 80px 0 50px;
+    background-color: #f8f9fa;
+}
+
+.app_google {
+    margin: 20px;
+}
+
+.app_google img {
+    height: 50px;
+}
+
+.app_container p {
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.app_container input {
+    margin-top: 30px;
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    outline: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer_top li a {
+    padding: 0 15px;
+    line-height: 40px;
+}
+
+.information {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer_botom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Category */
+.category_top_row {
+    display: flex;
+    color: gray;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    padding: 20px;
+}
+
+.li_list_item {
+    padding: 10px 15px;
+}
+
+.container_right_top {
+    display: flex;
+    padding: 20px 0;
+}
+
+.input_category {
+    padding-left: 200px; /* Adjust for alignment */
+}
+
+.input_category input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.container_right_botom {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.img {
+    width: 200px;
+    margin: 15px; /* Add margin for spacing */
+    text-align: center;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s;
+}
+
+.img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.img p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.header_title {
+    text-align: center;
+    line-height: 60px;
+}
+
+.header_title h3 a {
+    border-bottom: 2px dashed #007BFF;
+    padding: 5px;
+}
